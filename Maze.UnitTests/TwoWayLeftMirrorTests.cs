@@ -1,9 +1,10 @@
 ﻿using NUnit.Framework;
-using System;
+using Maze;
+
 namespace Maze.UnitTests
 {
     [TestFixture()]
-    public class Test
+    public class TwoWayLeftMirrorTests
     {
         [Test()]
         public void TestCase()

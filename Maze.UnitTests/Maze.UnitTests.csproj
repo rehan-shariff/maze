@@ -31,7 +31,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="NullMirrorTests.cs" />
+    <Compile Include="TwoWayLeftMirrorTests.cs" />
+    <Compile Include="TwoWayRightMirrorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
