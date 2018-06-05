@@ -4,7 +4,12 @@
     {
         public Coordinate AdvanceLaser(Coordinate roomPosition, Coordinate previousLaserPosition)
         {
-            return new Coordinate(0, 0);
+            if (roomPosition.y > previousLaserPosition.y ||
+                roomPosition.x < previousLaserPosition.x
+               )
+                return new Coordinate(roomPosition.x - 1, roomPosition.y);
+
+            return new Coordinate(roomPosition.x, roomPosition.y - 1);
         }
     }
 }
