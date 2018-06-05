@@ -34,6 +34,10 @@
     <Compile Include="NullMirrorTests.cs" />
     <Compile Include="TwoWayLeftMirrorTests.cs" />
     <Compile Include="TwoWayRightMirrorTests.cs" />
+    <Compile Include="OneWayLeftReflectLeftMirrorTests.cs" />
+    <Compile Include="OneWayLeftReflectRightMirrorTests.cs" />
+    <Compile Include="OneWayRightReflectRightMirrorTests.cs" />
+    <Compile Include="OneWayRightReflectLeftMirrorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

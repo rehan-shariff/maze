@@ -1,10 +1,9 @@
 ﻿using NUnit.Framework;
 using Maze;
-
 namespace Maze.UnitTests
 {
     [TestFixture()]
-    public class TwoWayRightMirrorTests
+    public class OneWayRightReflectRightMirrorTests
     {
         [Test()]
         public void TestCase()
@@ -12,8 +11,8 @@ namespace Maze.UnitTests
         }
 
         //GivenLaserIsMovingUpWhenAdvanceThenLaserMovesRight
-        //GivenLaserIsMovingDownWhenAdvanceThenLaserMovesLeft
-        //GivenLaserIsMovingRightWhenAdvanceThenLaserMovesUp
+        //GivenLaserIsMovingDownWhenAdvanceThenLaserMovesDown
+        //GivenLaserIsMovingRightWhenAdvanceThenLaserMovesRight
         //GivenLaserIsMovingLeftWhenAdvanceThenLaserMovesDown
     }
 }
