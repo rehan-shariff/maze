@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65E4F8EE-50C6-49DA-B477-D6416EE80B86}</ProjectGuid>
+    <ProjectGuid>{0AD110EC-115E-49C8-A662-638C0BD8F2A4}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>MazeTests</RootNamespace>
-    <AssemblyName>MazeTests</AssemblyName>
+    <RootNamespace>Maze.UnitTests</RootNamespace>
+    <AssemblyName>Maze.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,6 +35,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Maze.csproj">
+      <Project>{6233D477-E063-481E-BC16-1C466223FCB8}</Project>
+      <Name>Maze</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

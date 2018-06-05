@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
-namespace MazeTests
+namespace Maze.UnitTests
 {
     [TestFixture()]
     public class Test
