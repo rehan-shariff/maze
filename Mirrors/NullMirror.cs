@@ -2,10 +2,6 @@
 {
     public class NullMirror : IMirror
     {
-        public NullMirror()
-        {
-        }
-
         public Coordinate AdvanceLaser(Coordinate roomPosition, Coordinate previousLaserPosition)
         {
             if (roomPosition.x > previousLaserPosition.x)
