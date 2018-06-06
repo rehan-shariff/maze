@@ -47,6 +47,8 @@
     <Compile Include="Readers\IStreamReader.cs" />
     <Compile Include="Readers\MazeReader.cs" />
     <Compile Include="Readers\StreamReaderWrapper.cs" />
+    <Compile Include="Utils\LaserMover.cs" />
+    <Compile Include="Utils\LaserDirectionChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mirrors\" />

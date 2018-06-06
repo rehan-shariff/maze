@@ -14,9 +14,7 @@ namespace Maze.UnitTests
 
         public string ReadLine()
         {
-            if (queue.Count > 0)
-                return queue.Dequeue();
-            return null;
+            return (queue.Count > 0) ? queue.Dequeue() : null;
         }
     }
 }

@@ -4,12 +4,11 @@
     {
         public Position AdvanceLaser(Position roomPosition, Position previousLaserPosition)
         {
-            if (roomPosition.Y > previousLaserPosition.Y ||
-                roomPosition.X < previousLaserPosition.X
-               )
-                return new Position(roomPosition.X - 1, roomPosition.Y);
+            if (LaserDirectionChecker.IsLaserMovingUp(roomPosition, previousLaserPosition) ||
+                LaserDirectionChecker.IsLaserMovingLeft(roomPosition, previousLaserPosition))
+                return LaserMover.MoveLeft(roomPosition);
 
-            return new Position(roomPosition.X, roomPosition.Y - 1);
+             return LaserMover.MoveDown(roomPosition);
         }
     }
 }

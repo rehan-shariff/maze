@@ -32,7 +32,7 @@ namespace Maze.UnitTests
         }
 
         [Test()]
-        public void GivenLaserIsMovingRightWhenAdvanceThenLaserMovesUp()
+        public void GivenLaserIsMovingRightWhenAdvanceThenLaserMovesDown()
         {
             var previousLaserPosition = new Position(0, 1);
             var expectedLaserPosition = new Position(1, 0);
@@ -43,7 +43,7 @@ namespace Maze.UnitTests
         }
 
         [Test()]
-        public void GivenLaserIsMovingLeftWhenAdvanceThenLaserMovesDown()
+        public void GivenLaserIsMovingLeftWhenAdvanceThenLaserMovesUp()
         {
             var previousLaserPosition = new Position(2, 1);
             var expectedLaserPosition = new Position(1, 2);
