@@ -7,13 +7,13 @@ namespace Maze.UnitTests
     public class NullMirrorTests
     {
         private readonly NullMirror mirror = new NullMirror();
-        private readonly Coordinate roomPosition = new Coordinate(1, 1);
+        private readonly Position roomPosition = new Position(1, 1);
 
         [Test()]
         public void GivenLaserIsMovingUpWhenAdvanceThenLaserMovesUp()
         {
-            var previousLaserPosition = new Coordinate(1, 0);
-            var expectedLaserPosition = new Coordinate(1, 2);
+            var previousLaserPosition = new Position(1, 0);
+            var expectedLaserPosition = new Position(1, 2);
 
             var actualNextLaserPosition = mirror.AdvanceLaser(roomPosition, previousLaserPosition);
 
@@ -23,8 +23,8 @@ namespace Maze.UnitTests
         [Test()]
         public void GivenLaserIsMovingDownWhenAdvanceThenLaserMovesDown()
         {
-            var previousLaserPosition = new Coordinate(1, 2);
-            var expectedLaserPosition = new Coordinate(1, 0);
+            var previousLaserPosition = new Position(1, 2);
+            var expectedLaserPosition = new Position(1, 0);
 
             var actualNextLaserPosition = mirror.AdvanceLaser(roomPosition, previousLaserPosition);
 
@@ -34,8 +34,8 @@ namespace Maze.UnitTests
         [Test()]
         public void GivenLaserIsMovingRightWhenAdvanceThenLaserMovesRight()
         {
-            var previousLaserPosition = new Coordinate(0, 1);
-            var expectedLaserPosition = new Coordinate(2, 1);
+            var previousLaserPosition = new Position(0, 1);
+            var expectedLaserPosition = new Position(2, 1);
 
             var actualNextLaserPosition = mirror.AdvanceLaser(roomPosition, previousLaserPosition);
 
@@ -45,8 +45,8 @@ namespace Maze.UnitTests
         [Test()]
         public void GivenLaserIsMovingLefttWhenAdvanceThenLaserMovesLeft()
         {
-            var previousLaserPosition = new Coordinate(2, 1);
-            var expectedLaserPosition = new Coordinate(0, 1);
+            var previousLaserPosition = new Position(2, 1);
+            var expectedLaserPosition = new Position(0, 1);
 
             var actualNextLaserPosition = mirror.AdvanceLaser(roomPosition, previousLaserPosition);
 

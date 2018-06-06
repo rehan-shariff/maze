@@ -41,7 +41,7 @@
     <Compile Include="Mirrors\OneWayLeftReflectRightMirror.cs" />
     <Compile Include="Mirrors\OneWayRightReflectLeftMirror.cs" />
     <Compile Include="Mirrors\OneWayRightReflectRightMirror.cs" />
-    <Compile Include="Utils\Coordinate.cs" />
+    <Compile Include="Utils\Position.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mirrors\" />

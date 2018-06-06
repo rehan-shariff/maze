@@ -2,6 +2,6 @@
 {
     public interface IMirror
     {
-        Coordinate AdvanceLaser(Coordinate roomPosition, Coordinate previousLaserPosition);
+        Position AdvanceLaser(Position roomPosition, Position previousLaserPosition);
     }
 }
