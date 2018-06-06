@@ -33,7 +33,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Coordinate.cs" />
     <Compile Include="Mirrors\TwoWayLeftMirror.cs" />
     <Compile Include="Mirrors\TwoWayRightMirror.cs" />
     <Compile Include="Mirrors\IMirror.cs" />
@@ -42,9 +41,11 @@
     <Compile Include="Mirrors\OneWayLeftReflectRightMirror.cs" />
     <Compile Include="Mirrors\OneWayRightReflectLeftMirror.cs" />
     <Compile Include="Mirrors\OneWayRightReflectRightMirror.cs" />
+    <Compile Include="Utils\Coordinate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mirrors\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

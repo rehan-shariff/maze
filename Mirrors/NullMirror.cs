@@ -4,16 +4,16 @@
     {
         public Coordinate AdvanceLaser(Coordinate roomPosition, Coordinate previousLaserPosition)
         {
-            if (roomPosition.y > previousLaserPosition.y)
-                return new Coordinate(roomPosition.x, roomPosition.y + 1);
+            if (roomPosition.Y > previousLaserPosition.Y)
+                return new Coordinate(roomPosition.X, roomPosition.Y + 1);
             
-            if (roomPosition.y < previousLaserPosition.y)
-                return new Coordinate(roomPosition.x, roomPosition.y - 1);
+            if (roomPosition.Y < previousLaserPosition.Y)
+                return new Coordinate(roomPosition.X, roomPosition.Y - 1);
             
-            if (roomPosition.x > previousLaserPosition.x)
-                return new Coordinate(roomPosition.x + 1, roomPosition.y);
-
-            return new Coordinate(roomPosition.x - 1, roomPosition.y);
+            if (roomPosition.X > previousLaserPosition.X)
+                return new Coordinate(roomPosition.X + 1, roomPosition.Y);
+            
+            return new Coordinate(roomPosition.X - 1, roomPosition.Y);
         }
     }
 }
