@@ -12,20 +12,20 @@ namespace Maze
             streamReader = reader;
         }
 
-        public void Read(MazeSetup mazeSetup)
+        public void Read(MazeParams mazeParams)
         {
-            ReadDimensions(mazeSetup);
-            ReadMirrors(mazeSetup);
-            ReadLaserStart(mazeSetup);
+            ReadDimensions(mazeParams);
+            ReadMirrors(mazeParams);
+            ReadLaserStart(mazeParams);
         }
 
-        private void ReadDimensions(MazeSetup mazeSetup)
+        private void ReadDimensions(MazeParams mazeParams)
         {
             try
             {
                 var dimensions = streamReader.ReadLine().Split(',');
-                mazeSetup.Width = Int32.Parse(dimensions[0]);
-                mazeSetup.Length = Int32.Parse(dimensions[1]);
+                mazeParams.Width = Int32.Parse(dimensions[0]);
+                mazeParams.Length = Int32.Parse(dimensions[1]);
                 ReadDummySectionEndDelimeter();
             }
             catch (SystemException)
@@ -34,7 +34,7 @@ namespace Maze
             }
         }
 
-        private void ReadMirrors(MazeSetup mazeSetup)
+        private void ReadMirrors(MazeParams mazeParams)
         {
             string line;
             const string sectionEndDelimeter = "-1";
@@ -42,18 +42,18 @@ namespace Maze
             while (null != (line = streamReader.ReadLine()) &&
                    sectionEndDelimeter != line)
             {
-                ReadMirror(line, mazeSetup);
+                ReadMirror(line, mazeParams);
             }
         }
 
-        private void ReadMirror(string line, MazeSetup mazeSetup)
+        private void ReadMirror(string line, MazeParams mazeParams)
         {
             var positionAndOrientationSplitter = new Regex("(?<=[0-9,])(?=[LR])");
 
             try
             {
                 var mirror = ReadPositionAndOrientation(positionAndOrientationSplitter, line);
-                mazeSetup.Mirrors.Add(mirror);
+                mazeParams.Mirrors.Add(mirror);
             }
             catch (SystemException)
             {
@@ -71,7 +71,7 @@ namespace Maze
             return new MetaPosition(new Position(positionX, positionY), orientation);
         }
 
-        private void ReadLaserStart(MazeSetup mazeSetup)
+        private void ReadLaserStart(MazeParams mazeParams)
         {
             var positionAndOrientationSplitter = new Regex("(?<=[0-9,])(?=[HV])");
 
@@ -79,7 +79,7 @@ namespace Maze
             {
                 var line = streamReader.ReadLine();
                 var laserStart = ReadPositionAndOrientation(positionAndOrientationSplitter, line);
-                mazeSetup.LaserStart = laserStart;
+                mazeParams.LaserStart = laserStart;
                 ReadDummySectionEndDelimeter();
             }
             catch (SystemException)
@@ -88,7 +88,8 @@ namespace Maze
             }
         }
 
-        // Each section ends with a "-1". We need to read the line to move to the next section.
+        // Each section of the file ends with a "-1"
+        // We need to read the line to move to the next section
         private void ReadDummySectionEndDelimeter()
         {
             streamReader.ReadLine();

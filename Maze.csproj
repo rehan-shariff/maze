@@ -43,7 +43,7 @@
     <Compile Include="Mirrors\OneWayRightReflectRightMirror.cs" />
     <Compile Include="Utils\Position.cs" />
     <Compile Include="Utils\MetaPosition.cs" />
-    <Compile Include="MazeSetup.cs" />
+    <Compile Include="MazeParams.cs" />
     <Compile Include="Readers\IStreamReader.cs" />
     <Compile Include="Readers\MazeReader.cs" />
     <Compile Include="Readers\StreamReaderWrapper.cs" />

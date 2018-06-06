@@ -7,14 +7,14 @@ namespace Maze.UnitTests
     [TestFixture()]
     public class MazeReaderTests
     {
-        private MazeSetup mazeSetup;
+        private MazeParams mazeParams;
         private FakeStreamReader fakeStreamReader;
         private MazeReader mazeFileReader;
 
         [SetUp()]
         public void SetUp()
         {
-            mazeSetup = new MazeSetup();
+            mazeParams = new MazeParams();
         }
 
         [Test()]
@@ -23,10 +23,10 @@ namespace Maze.UnitTests
             fakeStreamReader = new FakeStreamReader(CreateQueueWithNoMirrors());
             mazeFileReader = new MazeReader(fakeStreamReader);
 
-            mazeFileReader.Read(mazeSetup);
+            mazeFileReader.Read(mazeParams);
 
             AssertDimensions();
-            Assert.IsEmpty(mazeSetup.Mirrors);
+            Assert.IsEmpty(mazeParams.Mirrors);
             AssertLaserStart();
         }
 
@@ -36,7 +36,7 @@ namespace Maze.UnitTests
             fakeStreamReader = new FakeStreamReader(CreateQueueWithSingleTwoSidedMirror());
             mazeFileReader = new MazeReader(fakeStreamReader);
 
-            mazeFileReader.Read(mazeSetup);
+            mazeFileReader.Read(mazeParams);
 
             AssertDimensions();
             AssertSingleTwoSidedMirror();
@@ -49,7 +49,7 @@ namespace Maze.UnitTests
             fakeStreamReader = new FakeStreamReader(CreateQueueWithMultipleTwoSidedMirrors());
             mazeFileReader = new MazeReader(fakeStreamReader);
 
-            mazeFileReader.Read(mazeSetup);
+            mazeFileReader.Read(mazeParams);
 
             AssertDimensions();
             AssertMultipleTwoSidedMirrors();
@@ -62,7 +62,7 @@ namespace Maze.UnitTests
             fakeStreamReader = new FakeStreamReader(CreateQueueWithMultipleMirrorTypes());
             mazeFileReader = new MazeReader(fakeStreamReader);
 
-            mazeFileReader.Read(mazeSetup);
+            mazeFileReader.Read(mazeParams);
 
             AssertDimensions();
             AssertMultipleMirrorTypes();
@@ -124,30 +124,30 @@ namespace Maze.UnitTests
         {
             const int expectedLength = 4;
             const int expectedWidth = 5;
-            Assert.AreEqual(expectedLength, mazeSetup.Length);
-            Assert.AreEqual(expectedWidth, mazeSetup.Width);
+            Assert.AreEqual(expectedLength, mazeParams.Length);
+            Assert.AreEqual(expectedWidth, mazeParams.Width);
         }
 
         private void AssertSingleTwoSidedMirror()
         {
             var expectedMirror = new MetaPosition(new Position(3, 2), "L");
-            Assert.True(mazeSetup.Mirrors.Contains(expectedMirror));
+            Assert.True(mazeParams.Mirrors.Contains(expectedMirror));
         }
 
         private void AssertMultipleTwoSidedMirrors()
         {
             var expectedMirror1 = new MetaPosition(new Position(3, 2), "L");
             var expectedMirror2 = new MetaPosition(new Position(1, 2), "R");
-            Assert.True(mazeSetup.Mirrors.Contains(expectedMirror1));
-            Assert.True(mazeSetup.Mirrors.Contains(expectedMirror2));
+            Assert.True(mazeParams.Mirrors.Contains(expectedMirror1));
+            Assert.True(mazeParams.Mirrors.Contains(expectedMirror2));
         }
 
         private void AssertMultipleMirrorTypes()
         {
             var expectedMirror1 = new MetaPosition(new Position(3, 2), "L");
             var expectedMirror2 = new MetaPosition(new Position(1, 2), "RL");
-            Assert.True(mazeSetup.Mirrors.Contains(expectedMirror1));
-            Assert.True(mazeSetup.Mirrors.Contains(expectedMirror2));
+            Assert.True(mazeParams.Mirrors.Contains(expectedMirror1));
+            Assert.True(mazeParams.Mirrors.Contains(expectedMirror2));
         }
 
         private void AssertLaserStart()
@@ -155,9 +155,9 @@ namespace Maze.UnitTests
             const int expectedLaserStartPositionX = 0;
             const int expectedLaserStartPositionY = 0;
             const string expectedLaserStartOrientation = "H";
-            Assert.AreEqual(expectedLaserStartPositionX, mazeSetup.LaserStart.Position.X);
-            Assert.AreEqual(expectedLaserStartPositionY, mazeSetup.LaserStart.Position.Y);
-            Assert.AreEqual(expectedLaserStartOrientation, mazeSetup.LaserStart.MetaData);
+            Assert.AreEqual(expectedLaserStartPositionX, mazeParams.LaserStart.Position.X);
+            Assert.AreEqual(expectedLaserStartPositionY, mazeParams.LaserStart.Position.Y);
+            Assert.AreEqual(expectedLaserStartOrientation, mazeParams.LaserStart.MetaData);
         }
     }
 }
