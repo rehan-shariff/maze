@@ -40,6 +40,8 @@ Laser position and orientation
 3. Click on the Maze.UnitTests project
 4. Click on Run->Run Unit Tests
 
+You can also use [MSBuild](https://msdn.microsoft.com/en-us/library/ms164311.aspx).
+
 *Note: This project was built using Visual Studio for Mac 2017 on macOS 10.13.3*
 
 #### Travis CI
