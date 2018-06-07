@@ -79,4 +79,4 @@ Maze.exe input_file_path/input_file_name.txt
 
 ## License
 
-The maze challenge is not my own, but the code is. Read the license.
+The maze challenge is not my own, but the code is. Read the [license](https://github.com/rehan-shariff/maze/blob/master/LICENSE).
