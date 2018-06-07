@@ -1,5 +1,7 @@
 # Maze
 
+[![Build Status](https://travis-ci.com/rehan-shariff/maze.svg?branch=master)](https://travis-ci.com/rehan-shariff/maze)
+
 ## Table of Contents
 1. [Objective](#objective)
 2. [Build](#build)
@@ -46,7 +48,7 @@ You can also use [MSBuild](https://msdn.microsoft.com/en-us/library/ms164311.asp
 
 #### Travis CI
 
-[![Build Status](https://travis-ci.com/rehan-shariff/maze.svg?branch=master)](https://travis-ci.com/rehan-shariff/maze)
+[Travis CI](https://travis-ci.com/rehan-shariff/maze)
 
 ## Run
 
