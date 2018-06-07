@@ -11,9 +11,9 @@
                 return LaserMover.MoveLeft(roomPosition);
             
             if (LaserDirectionChecker.IsLaserMovingRight(roomPosition, previousLaserPosition))
-                return LaserMover.MoveDown(roomPosition);
+                return LaserMover.MoveUp(roomPosition);
             
-            return LaserMover.MoveUp(roomPosition);
+            return LaserMover.MoveDown(roomPosition);
         }
     }
 }

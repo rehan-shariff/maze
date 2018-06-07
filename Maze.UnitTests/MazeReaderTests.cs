@@ -122,10 +122,8 @@ namespace Maze.UnitTests
 
         private void AssertDimensions()
         {
-            const int expectedLength = 4;
-            const int expectedWidth = 5;
-            Assert.AreEqual(expectedLength, mazeParams.Length);
-            Assert.AreEqual(expectedWidth, mazeParams.Width);
+            Assert.AreEqual(4, mazeParams.Length);
+            Assert.AreEqual(5, mazeParams.Width);
         }
 
         private void AssertSingleTwoSidedMirror()
@@ -152,12 +150,9 @@ namespace Maze.UnitTests
 
         private void AssertLaserStart()
         {
-            const int expectedLaserStartPositionX = 0;
-            const int expectedLaserStartPositionY = 0;
-            const string expectedLaserStartOrientation = "H";
-            Assert.AreEqual(expectedLaserStartPositionX, mazeParams.LaserStart.Position.X);
-            Assert.AreEqual(expectedLaserStartPositionY, mazeParams.LaserStart.Position.Y);
-            Assert.AreEqual(expectedLaserStartOrientation, mazeParams.LaserStart.MetaData);
+            Assert.AreEqual(0, mazeParams.LaserStart.Position.X);
+            Assert.AreEqual(0, mazeParams.LaserStart.Position.Y);
+            Assert.AreEqual("H", mazeParams.LaserStart.MetaData);
         }
     }
 }

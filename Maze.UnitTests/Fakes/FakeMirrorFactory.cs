@@ -12,15 +12,15 @@ namespace Maze.UnitTests
         public int OneWayRightReflectLeftMirrorCount { get; private set; } = 0;
         public int OneWayRightReflectRightMirrorCount { get; private set; } = 0;
 
-        public IMirror CreateMirror(string mirrorType)
+        public IMirror CreateMirror(string mirrorOrientation)
         {
-            UpdateMirrorCounts(mirrorType);
+            UpdateMirrorCounts(mirrorOrientation);
             return new NullMirror();
         }
 
-        private void UpdateMirrorCounts(string mirrorType)
+        private void UpdateMirrorCounts(string mirrorOrientation)
         {
-            switch (mirrorType)
+            switch (mirrorOrientation)
             {
                 case "L":
                     TwoWayLeftMirrorCount += 1;

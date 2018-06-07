@@ -2,6 +2,6 @@
 {
     public interface IMirrorFactory
     {
-        IMirror CreateMirror(string mirrorType = "");
+        IMirror CreateMirror(string mirrorOrientation = "");
     }
 }

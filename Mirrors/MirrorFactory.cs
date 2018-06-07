@@ -2,9 +2,9 @@
 {
     public class MirrorFactory : IMirrorFactory
     {
-        public IMirror CreateMirror(string mirrorType = "")
+        public IMirror CreateMirror(string mirrorOrientation = "")
         {
-            switch(mirrorType)
+            switch(mirrorOrientation)
             {
                 case "L":
                     return new TwoWayLeftMirror();

@@ -52,10 +52,17 @@
     <Compile Include="Maze.cs" />
     <Compile Include="Mirrors\IMirrorFactory.cs" />
     <Compile Include="Mirrors\MirrorFactory.cs" />
+    <Compile Include="Utils\MetaPositionPrinter.cs" />
+    <Compile Include="Lasers\HorizontalLaser.cs" />
+    <Compile Include="Lasers\ILaser.cs" />
+    <Compile Include="Lasers\VerticalLaser.cs" />
+    <Compile Include="Lasers\LaserFactory.cs" />
+    <Compile Include="Lasers\NullLaser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mirrors\" />
     <Folder Include="Utils\" />
+    <Folder Include="Lasers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
