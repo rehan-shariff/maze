@@ -75,7 +75,7 @@ Maze.exe input_file_path/input_file_name.txt
 6. Update the [README](https://github.com/rehan-shariff/maze/blob/master/README.md) if relevant
 7. Create a pull request
 
-*Note: In the future, FXCop, StyleCop, OpenCover will be added
+*Note: In the future, FXCop, StyleCop, OpenCover will be added*
 
 ## License
 
