@@ -75,7 +75,7 @@ Maze.exe input_file_path/input_file_name.txt
 2. Follow [SOLID](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod) design principles
 3. Verify the unit tests pass
 4. Check your code for [smells](http://www.industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf) and refactor
-5. Comments are a code smell!
+5. Comments make the code smell!
 6. Update the [README](https://github.com/rehan-shariff/maze/blob/master/README.md) if relevant
 7. Create a pull request
 
