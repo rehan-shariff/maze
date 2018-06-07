@@ -8,7 +8,7 @@
                 LaserDirectionChecker.IsLaserMovingLeft(roomPosition, previousLaserPosition))
                 return LaserMover.MoveLeft(roomPosition);
 
-             return LaserMover.MoveDown(roomPosition);
+            return LaserMover.MoveDown(roomPosition);
         }
     }
 }

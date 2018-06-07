@@ -6,12 +6,7 @@ namespace Maze
     {
         public int Length { get; set; }
         public int Width { get; set; }
-        public List<MetaPosition> Mirrors { get; }
+        public List<MetaPosition> Mirrors { get; set; }
         public MetaPosition LaserStart { get; set; }
-
-        public MazeParams()
-        {
-            Mirrors = new List<MetaPosition>();
-        }
     }
 }

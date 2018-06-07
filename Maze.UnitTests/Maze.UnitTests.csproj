@@ -40,6 +40,8 @@
     <Compile Include="OneWayRightReflectLeftMirrorTests.cs" />
     <Compile Include="MazeReaderTests.cs" />
     <Compile Include="Fakes\FakeStreamReader.cs" />
+    <Compile Include="MazeTests.cs" />
+    <Compile Include="Fakes\FakeMirrorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

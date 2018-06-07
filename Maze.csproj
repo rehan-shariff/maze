@@ -43,12 +43,15 @@
     <Compile Include="Mirrors\OneWayRightReflectRightMirror.cs" />
     <Compile Include="Utils\Position.cs" />
     <Compile Include="Utils\MetaPosition.cs" />
-    <Compile Include="MazeParams.cs" />
     <Compile Include="Readers\IStreamReader.cs" />
     <Compile Include="Readers\MazeReader.cs" />
     <Compile Include="Readers\StreamReaderWrapper.cs" />
     <Compile Include="Utils\LaserMover.cs" />
     <Compile Include="Utils\LaserDirectionChecker.cs" />
+    <Compile Include="Utils\MazeParams.cs" />
+    <Compile Include="Maze.cs" />
+    <Compile Include="Mirrors\IMirrorFactory.cs" />
+    <Compile Include="Mirrors\MirrorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mirrors\" />

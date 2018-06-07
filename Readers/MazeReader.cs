@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace Maze
@@ -38,6 +39,8 @@ namespace Maze
         {
             string line;
             const string sectionEndDelimeter = "-1";
+
+            mazeParams.Mirrors = new List<MetaPosition>();
 
             while (null != (line = streamReader.ReadLine()) &&
                    sectionEndDelimeter != line)
