@@ -77,18 +77,19 @@ namespace Maze
         private void ReadLaserStart(MazeParams mazeParams)
         {
             var positionAndOrientationSplitter = new Regex("(?<=[0-9,])(?=[HV])");
+            var line = streamReader.ReadLine();
 
             try
             {
-                var line = streamReader.ReadLine();
                 var laserStart = ReadPositionAndOrientation(positionAndOrientationSplitter, line);
                 mazeParams.LaserStart = laserStart;
-                ReadDummySectionEndDelimeter();
             }
             catch (SystemException)
             {
                 Console.WriteLine("Exception while reading maze laser start");
             }
+
+            ReadDummySectionEndDelimeter();
         }
 
         // Each section of the file ends with a "-1"
