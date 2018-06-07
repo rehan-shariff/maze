@@ -1,3 +1,4 @@
-bin/
+bin/Debug/
+*.UnitTests/bin
 obj/
 .vs/
