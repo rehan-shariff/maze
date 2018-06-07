@@ -13,9 +13,9 @@
 
 GIVEN a block of square rooms (X by Y) with an opening in the center of each wall
 
-AND a laser which enters horizontally or vertically one of the outside openings in the outside walls
+AND a laser which enters horizontally or vertically through one of the outside openings in the outside walls
 
-FIND the exit point of a laser and its final orientation after it has advanced through the maze
+FIND the exit point of the laser and its final orientation after it has advanced through the maze
 
 Some rooms have mirrors at a 45-degree angle. They can be oriented left or right. They can reflect on both sides or just one. When the laser hits a reflective side, the laser reflects at a 90 degree angle.
 
